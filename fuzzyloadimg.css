@@ -1,0 +1,28 @@
+#fuzzy-load-img-container {
+    width: 100vw;
+    height: 100vh;
+    background: #181818;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.fuzzy-load-img {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 1s linear;
+}
+
+.fuzzy-load-img.loaded {
+    opacity: 1;
+}
+
+.fuzzy-load-img.small {
+    filter: blur(15px);
+    /* this is needed so Safari keeps sharp edges */
+    transform: scale(1);
+}
